@@ -33,7 +33,7 @@
                     android:src="@drawable/xtremetec_logo"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
-                    android:layout_weight="9"/>
+                    android:layout_weight="8"/>
 
                 <Button
                     android:id="@+id/searchBtn"
@@ -42,7 +42,8 @@
                     android:layout_weight="1"
                     android:text="Buscar..."
                     android:textColor="#ffffff"
-                    android:backgroundTint="#ae0000"/>
+                    android:backgroundTint="#ae0000"
+                    android:drawableLeft="@drawable/search_white"/>
 
 
             </LinearLayout>
