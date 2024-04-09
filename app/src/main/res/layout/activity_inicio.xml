@@ -41,7 +41,8 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:text="Buscar..."
-                    android:textColor="@drawable/xtpc_theme"/>
+                    android:textColor="#ffffff"
+                    android:backgroundTint="#ae0000"/>
 
 
             </LinearLayout>
