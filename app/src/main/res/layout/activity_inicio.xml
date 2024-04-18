@@ -36,25 +36,6 @@
                     android:layout_height="40dp"
                     android:layout_weight="8"/>
 
-                <Button
-                    android:id="@+id/searchBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:text="Buscar..."
-                    android:textColor="#ffffff"
-                    android:backgroundTint="#ae0000"
-                    android:drawableLeft="@drawable/search_white"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:drawableLeft="@drawable/carrito"
-                    android:text="3"
-                    android:textColor="#ffffff"
-                    android:textSize="24dp"
-                    android:textStyle="bold"/>
-
             </LinearLayout>
 
         </LinearLayout>
@@ -88,7 +69,7 @@
                     android:id="@+id/tvitem1"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/item1grid"
+                    android:layout_alignTop="@+id/item1grid"
                     android:gravity="center"
                     android:text="Liquid Cooler MasterLiquid ML360-SUBZERO"
                     android:textColor="#1257ab"
@@ -97,7 +78,7 @@
                 <TextView
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/item1grid"
+                    android:layout_alignBottom="@+id/item1grid"
                     android:text="$7,699.00 MXN"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -171,12 +152,21 @@
                 <TextView
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/item4grid"
+                    android:layout_alignTop="@+id/item4grid"
                     android:gravity="center"
                     android:text="Pasta Térmica CoolerMaster CryoFuze"
                     android:textColor="#1257ab"
                     android:textStyle="bold"
                     android:background="#CCA9A8A8"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/item4grid"
+                    android:background="#CCA9A8A8"
+                    android:gravity="right"
+                    android:text="$269.00 MXN"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
@@ -190,7 +180,7 @@
                 <TextView
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/item5grid"
+                    android:layout_alignTop="@+id/item5grid"
                     android:gravity="center"
                     android:text="Bocinas Bluetooth Logitech G560 Lightsync USB 3.5mm"
                     android:textColor="#1257ab"
@@ -199,7 +189,7 @@
                 <TextView
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/item5grid"
+                    android:layout_alignBottom="@+id/item5grid"
                     android:text="$4,549.00 MXN"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -246,6 +236,10 @@
                 android:textStyle="bold" />
 
         </GridLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
