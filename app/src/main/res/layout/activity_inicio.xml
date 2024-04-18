@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,6 +19,7 @@
             android:paddingBottom="5dp"
             android:background="#ae0000">
 
+            <!-- Banner, Menu sidebar, Logo y Barra de Buscador -->
             <LinearLayout
                 android:id="@+id/banner"
                 android:layout_width="match_parent"
@@ -45,11 +46,206 @@
                     android:backgroundTint="#ae0000"
                     android:drawableLeft="@drawable/search_white"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/carrito"
+                    android:text="3"
+                    android:textColor="#ffffff"
+                    android:textSize="24dp"
+                    android:textStyle="bold"/>
 
             </LinearLayout>
 
         </LinearLayout>
 
+        <!-- Inicio / Productos Destacados -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Destacados y en Oferta!"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_margin="10dp"
+            />
+        <GridLayout
+            android:id="@+id/destacados_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_margin="3dp">
+                <ImageView
+                    android:id="@+id/item1grid"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/liquidcooler1"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:id="@+id/tvitem1"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/item1grid"
+                    android:gravity="center"
+                    android:text="Liquid Cooler MasterLiquid ML360-SUBZERO"
+                    android:textColor="#1257ab"
+                    android:textStyle="bold"
+                    android:background="#CCA9A8A8"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/item1grid"
+                    android:text="$7,699.00 MXN"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    android:background="#CCA9A8A8"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="3dp">
+                <ImageView
+                    android:id="@+id/item2grid"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/rtx4070super"/>
+                <TextView
+                    android:id="@+id/tvitem2"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/item2grid"
+                    android:gravity="center"
+                    android:text="GPU Nvidia RTX 4070 Super AERO OC 12GB"
+                    android:textColor="#1257ab"
+                    android:textStyle="bold"
+                    android:background="#CCA9A8A8"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/item2grid"
+                    android:text="$13,929.00 MXN"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    android:background="#CCA9A8A8"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="3dp">
+                <ImageView
+                    android:id="@+id/item3grid"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/mastercoolerventilador"/>
+                <TextView
+                    android:id="@+id/tvitem3"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/item3grid"
+                    android:gravity="center"
+                    android:text="CoolerMaster Ventilador 120mm MF120 Halo RGB"
+                    android:textColor="#1257ab"
+                    android:textStyle="bold"
+                    android:background="#CCA9A8A8"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/item3grid"
+                    android:text="$339.00 MXN"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    android:background="#CCA9A8A8"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="3dp">
+                <ImageView
+                    android:id="@+id/item4grid"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/pastatermica_coolermastercryofuze"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/item4grid"
+                    android:gravity="center"
+                    android:text="Pasta Térmica CoolerMaster CryoFuze"
+                    android:textColor="#1257ab"
+                    android:textStyle="bold"
+                    android:background="#CCA9A8A8"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="3dp">
+                <ImageView
+                    android:id="@+id/item5grid"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/bocinasbluetooth_g560"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/item5grid"
+                    android:gravity="center"
+                    android:text="Bocinas Bluetooth Logitech G560 Lightsync USB 3.5mm"
+                    android:textColor="#1257ab"
+                    android:textStyle="bold"
+                    android:background="#CCA9A8A8"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/item5grid"
+                    android:text="$4,549.00 MXN"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    android:background="#CCA9A8A8"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="3dp">
+                <ImageView
+                    android:id="@+id/item6grid"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/laptopasus"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/item6grid"
+                    android:gravity="center"
+                    android:text="Laptop Asus TUF Gaming Intel i5-10300H GTX 1650"
+                    android:textColor="#1257ab"
+                    android:textStyle="bold"
+                    android:background="#CCA9A8A8"/>
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/item6grid"
+                    android:text="$339.00 MXN"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="right"
+                    android:background="#CCA9A8A8"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="#CCA9A8A8"
+                android:gravity="right"
+                android:text="$269.00 MXN"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+        </GridLayout>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
