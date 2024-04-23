@@ -125,6 +125,14 @@
             android:text="Guardar Cambios" />
 
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:menu="@menu/bottom_nav_menu"/>
+
     </LinearLayout>
 
 </LinearLayout>
