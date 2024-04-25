@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "249050878109",
+    "project_id": "xtremetecpcapp",
+    "storage_bucket": "xtremetecpcapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249050878109:android:ac17e50328e522738dc474",
+        "android_client_info": {
+          "package_name": "equipo6.xtremetecpc.xtpc_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1K8_26sJStvMtsin9embhCwNYkDE05fM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
