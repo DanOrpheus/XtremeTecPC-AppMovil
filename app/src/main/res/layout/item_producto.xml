@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imgViewFotoProducto"
+        android:id="@+id/imgViewFotoProductoBusqueda"
         android:layout_width="65dp"
         android:layout_height="65dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
@@ -38,22 +38,20 @@
         android:text="Nombre del producto"
         android:textSize="16dp"
         android:textColor="@color/black"
-        app:layout_constraintStart_toEndOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/imgViewFotoProducto" />
+        app:layout_constraintStart_toEndOf="@+id/view2" />
 
 
     <TextView
         android:id="@+id/txtViewPrecioBuscador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="4dp"
         android:text="$ 33000"
-        android:textStyle="bold"
         android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

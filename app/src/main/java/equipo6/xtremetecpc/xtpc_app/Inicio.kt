@@ -10,6 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Inicio : AppCompatActivity() {
 
+
     // Listener para manejar los clics en los elementos del menú
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -35,6 +36,7 @@ class Inicio : AppCompatActivity() {
         setContentView(R.layout.activity_inicio)
         // Obtener una referencia al BottomNavigationView del layout
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.navmenu)
+
 
         // Configurar el listener para manejar los clics en los elementos del menú
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)

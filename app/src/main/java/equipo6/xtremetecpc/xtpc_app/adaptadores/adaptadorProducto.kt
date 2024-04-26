@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import equipo6.xtremetecpc.xtpc_app.Producto
 import equipo6.xtremetecpc.xtpc_app.R
 
+
 class adaptadorProducto(private val context: Context, private val productList: List<Producto>) : RecyclerView.Adapter<adaptadorProducto.ProductoViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_producto, parent, false)
