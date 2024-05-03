@@ -29,8 +29,8 @@ class Buscador1 : AppCompatActivity(), SearchView.OnQueryTextListener {
         listaProductos.layoutManager=LinearLayoutManager(this)
 
         listaArrayProducto = ArrayList()
-        adapter = adaptadorProductoBusqueda(listaArrayProducto)
-        listaProductos.adapter = adapter
+        //adapter = adaptadorProductoBusqueda(listaArrayProducto)
+        //listaProductos.adapter = adapter
 
         val productos = productoDAO.buscarProductos("") { productos ->
             adapter = adaptadorProductoBusqueda(productos)

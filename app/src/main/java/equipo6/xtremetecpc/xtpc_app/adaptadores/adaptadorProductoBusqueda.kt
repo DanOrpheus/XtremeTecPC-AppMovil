@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import equipo6.xtremetecpc.xtpc_app.Buscador1
 import equipo6.xtremetecpc.xtpc_app.Producto
 import equipo6.xtremetecpc.xtpc_app.R
@@ -20,15 +21,8 @@ import java.util.stream.Collectors
 
 class adaptadorProductoBusqueda (private var productosBusqueda: List<Producto>) : RecyclerView.Adapter<adaptadorProductoBusqueda.ProductoBusquedaViewHolder>() {
 
-    private val listaOriginal: ArrayList<Producto> = ArrayList(productosBusqueda)
-    private lateinit var txtSearchView: SearchView
-
-    init {
-        //Se está inicializando la lista listaOriginal con los elementos de la lista productosBusqueda
-        //Esto se hace para mantener una copia original de la lista de contactos sin filtrar, de modo que cuando se realice
-        // un filtrado en la lista principal (productosBusqueda), siempre se pueda restaurar la lista original si es necesario.
-        listaOriginal.addAll(productosBusqueda)
-    }
+    private val listaOriginal: List<Producto> = productosBusqueda.toList()
+    //private lateinit var txtSearchView: SearchView
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductoBusquedaViewHolder {
         // Implementa la lógica para crear el ViewHolder
@@ -39,9 +33,18 @@ class adaptadorProductoBusqueda (private var productosBusqueda: List<Producto>) 
     override fun onBindViewHolder(holder: ProductoBusquedaViewHolder, position: Int) {
 
         val producto = productosBusqueda[position]
+
         holder.itemView.findViewById<TextView>(R.id.txtViewNombreProductoBuscador).text = producto.nombre
         holder.itemView.findViewById<TextView>(R.id.txtViewPrecioBuscador).text = producto.precio.toString()
-        holder.itemView.visibility = View.VISIBLE // Asegurarse de que la vista esté visible
+
+        val imageView = holder.itemView.findViewById<ImageView>(R.id.imgViewFotoProductoBusqueda) // Asegúrate de que el ID sea el correcto
+        val imageUrl = producto.imagenurl // Suponiendo que tienes la URL de la imagen en tu objeto Producto
+
+        Glide.with(holder.itemView.context) // Contexto del fragmento o actividad
+            .load(imageUrl) // Cargar la imagen desde la URL
+            .into(imageView) // Colocar la imagen en el ImageView
+
+        holder.itemView.visibility = View.VISIBLE
 
     }
 
@@ -49,8 +52,6 @@ class adaptadorProductoBusqueda (private var productosBusqueda: List<Producto>) 
         return productosBusqueda.size
     }
     inner class ProductoBusquedaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val nombreTextView: TextView = itemView.findViewById(R.id.txtViewNombreProductoBuscador)
-        private val precioTextView: TextView = itemView.findViewById(R.id.txtViewPrecioBuscador)
 
         init {
             itemView.setOnClickListener { view ->
@@ -62,12 +63,12 @@ class adaptadorProductoBusqueda (private var productosBusqueda: List<Producto>) 
         }
     }
     fun filtrar(query: String) {
-        val filteredList = if (query.isEmpty()) {
+        productosBusqueda = if (query.isEmpty()) {
             listaOriginal.toList() // Restaura la lista original si el texto de búsqueda está vacío
         } else {
             listaOriginal.filter { it.nombre.contains(query, ignoreCase = true) }
         }
-        productosBusqueda = filteredList
+
         notifyDataSetChanged()
     }
 

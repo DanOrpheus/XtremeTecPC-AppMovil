@@ -11,11 +11,15 @@ import equipo6.xtremetecpc.xtpc_app.Producto
 class ProductoDAO {
     fun buscarProductos(query: String, callback: (List<Producto>) -> Unit) {
         val referenciaBaseDatos = FirebaseDatabase.getInstance().getReference("producto")
-        val resultados = mutableListOf<Producto>()
 
-        referenciaBaseDatos.addValueEventListener(object : ValueEventListener {
+
+        // Aplicar el filtro de consulta directamente en Firebase
+        val consulta = referenciaBaseDatos.orderByChild("nombre").startAt(query).endAt(query + "\uf8ff")
+
+        consulta.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                resultados.clear() // Limpiar la lista antes de agregar nuevos resultados
+                val resultados = mutableListOf<Producto>()
+                //resultados.clear() // Limpiar la lista antes de agregar nuevos resultados
                 for (productoSnapshot in snapshot.children) {
                     val producto = productoSnapshot.getValue(Producto::class.java)
                     if (producto != null && producto.nombre.contains(query, ignoreCase = true)) {
