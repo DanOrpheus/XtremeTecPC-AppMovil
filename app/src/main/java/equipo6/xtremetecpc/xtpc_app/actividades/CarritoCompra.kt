@@ -3,6 +3,7 @@ package equipo6.xtremetecpc.xtpc_app.actividades
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import equipo6.xtremetecpc.xtpc_app.Inicio
 import equipo6.xtremetecpc.xtpc_app.R
@@ -41,5 +42,9 @@ class CarritoCompra : AppCompatActivity() {
         val intent = Intent(this, clase)
         startActivity(intent)
         // Opcional: cierra la actividad actual si deseas
+    }
+    fun retroceder(view: View) {
+        //para iconos de retroceder
+        onBackPressed()
     }
 }

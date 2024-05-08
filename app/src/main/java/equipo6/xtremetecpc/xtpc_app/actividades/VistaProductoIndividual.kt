@@ -2,6 +2,7 @@ package equipo6.xtremetecpc.xtpc_app.actividades
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -90,5 +91,9 @@ class VistaProductoIndividual : AppCompatActivity() {
         val intent = Intent(this, clase)
         startActivity(intent)
         // Opcional: cierra la actividad actual si deseas
+    }
+    fun retroceder(view: View) {
+        //para iconos de retroceder
+        onBackPressed()
     }
 }

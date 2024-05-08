@@ -2,6 +2,7 @@ package equipo6.xtremetecpc.xtpc_app.actividades
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -48,6 +49,10 @@ class Buscador1 : AppCompatActivity(), SearchView.OnQueryTextListener {
     override fun onQueryTextChange(newText: String?): Boolean {
         adapter.filtrar(newText.orEmpty())
         return true
+    }
+    fun retroceder(view: View) {
+        //para iconos de retroceder
+        onBackPressed()
     }
 
 }
