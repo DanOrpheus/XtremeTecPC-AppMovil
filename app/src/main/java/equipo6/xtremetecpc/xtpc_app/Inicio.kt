@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import equipo6.xtremetecpc.xtpc_app.actividades.Buscador1
+import equipo6.xtremetecpc.xtpc_app.actividades.CarritoCompra
 
 
 class Inicio : AppCompatActivity() {
@@ -24,7 +25,10 @@ class Inicio : AppCompatActivity() {
                     abrirActividad(Buscador1::class.java)
                     return@OnNavigationItemSelectedListener true
                 }
-                // Agregar más casos según sea necesario para otros elementos del menú
+                R.id.btm_nav_carrito ->{
+                    abrirActividad(CarritoCompra::class.java)
+                    return@OnNavigationItemSelectedListener true
+                }
             }
             false
         }

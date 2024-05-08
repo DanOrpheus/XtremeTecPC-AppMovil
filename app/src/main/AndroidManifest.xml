@@ -18,7 +18,13 @@
         <activity
             android:name=".actividades.VistaProductoIndividual"
             android:exported="false" />
-        <activity android:name=".actividades.Buscador1" />
+
+        <activity android:name=".actividades.CarritoCompra"
+            android:exported="false"/>
+
+        <activity android:name=".actividades.Buscador1"
+            android:exported="false"/>
+
         <activity
             android:name=".Inicio"
             android:exported="true">

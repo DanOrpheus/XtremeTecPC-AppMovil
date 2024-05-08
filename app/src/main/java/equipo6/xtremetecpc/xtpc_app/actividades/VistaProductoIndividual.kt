@@ -31,7 +31,10 @@ class VistaProductoIndividual : AppCompatActivity() {
                     abrirActividad(Buscador1::class.java)
                     return@OnNavigationItemSelectedListener true
                 }
-                // Agregar más casos según sea necesario para otros elementos del menú
+                R.id.btm_nav_carrito ->{
+                    abrirActividad(CarritoCompra::class.java)
+                    return@OnNavigationItemSelectedListener true
+                }
             }
             false
         }
