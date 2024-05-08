@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import equipo6.xtremetecpc.xtpc_app.Producto
+import equipo6.xtremetecpc.xtpc_app.bd.Producto
 import equipo6.xtremetecpc.xtpc_app.R
 
 

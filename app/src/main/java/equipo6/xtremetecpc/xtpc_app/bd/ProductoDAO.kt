@@ -1,11 +1,9 @@
-package equipo6.xtremetecpc.xtpc_app.adaptadores
+package equipo6.xtremetecpc.xtpc_app.bd
 
-import android.widget.Toast
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import equipo6.xtremetecpc.xtpc_app.Producto
 
 
 class ProductoDAO {

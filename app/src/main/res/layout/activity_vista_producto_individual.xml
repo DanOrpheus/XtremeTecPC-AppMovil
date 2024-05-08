@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".productoIndividual">
+    android:orientation="vertical"
+    tools:context=".actividades.VistaProductoIndividual">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
+        <!-- Contenido de ScrollView -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Tu contenido existente aquí -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -92,7 +96,7 @@
                     app:layout_constraintVertical_bias="0.225">
 
                     <TextView
-                        android:id="@+id/txtViewNombreProducto"
+                        android:id="@+id/txtViewNombreProductoVista"
                         android:layout_width="272dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -101,7 +105,7 @@
                         android:textSize="22dp" />
 
                     <TextView
-                        android:id="@+id/txtViewPrecioProducto"
+                        android:id="@+id/txtViewPrecioProductoVista"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -145,6 +149,22 @@
                         android:layout_marginStart="8dp"
                         android:text="calificaciones"
                         android:textSize="20dp" />
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Stock"
+                        android:textSize="20dp" />
+                    <TextView
+                        android:id="@+id/txtViewCantidadStockVista"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="0"
+                        android:textColor="@color/rojo"
+                        android:textSize="20dp" />
+
 
                 </LinearLayout>
 
@@ -158,12 +178,12 @@
                 android:background="@color/grisClarito" />
 
             <TextView
-                android:id="@+id/txtViewDescripcionProducto"
+                android:id="@+id/txtViewDescripcionProductoVista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="Esta es una descripción muestra.....chipi chipi chapa chapa dubi dubi daba daba...." />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -173,21 +193,20 @@
                 android:layout_margin="16dp"
                 android:background="@drawable/bordes_boton_relleno"
                 android:textColor="@color/white"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="Agregar al carrito"
                 style="@android:style/Widget.Button"/>
 
         </LinearLayout>
     </ScrollView>
 
+    <!-- BottomNavigationView -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="0dp"
+        android:id="@+id/navmenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_marginBottom="8dp" />
 
-</FrameLayout>
+</LinearLayout>

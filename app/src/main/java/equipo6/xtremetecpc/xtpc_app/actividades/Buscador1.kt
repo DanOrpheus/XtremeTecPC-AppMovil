@@ -1,4 +1,4 @@
-package equipo6.xtremetecpc.xtpc_app
+package equipo6.xtremetecpc.xtpc_app.actividades
 
 import android.graphics.Color
 import android.os.Bundle
@@ -7,9 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import equipo6.xtremetecpc.xtpc_app.R.id.recycleBuscador
-import equipo6.xtremetecpc.xtpc_app.adaptadores.ProductoDAO
+import equipo6.xtremetecpc.xtpc_app.R
+import equipo6.xtremetecpc.xtpc_app.bd.ProductoDAO
 import equipo6.xtremetecpc.xtpc_app.adaptadores.adaptadorProductoBusqueda
+import equipo6.xtremetecpc.xtpc_app.bd.Producto
 
 class Buscador1 : AppCompatActivity(), SearchView.OnQueryTextListener {
     private lateinit var txtSearchView: SearchView

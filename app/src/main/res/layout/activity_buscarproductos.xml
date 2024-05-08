@@ -23,15 +23,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:iconifiedByDefault="false"
-            android:queryHint="@string/hintSearchView"
-            android:theme="@style/aparienciaHint" />
+            />
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleBuscador"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleBuscador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+
+        <FrameLayout
+            android:id="@+id/contenedor_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 </LinearLayout>
