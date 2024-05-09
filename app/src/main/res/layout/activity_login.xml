@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gris"
+    tools:context=".activity_login">
+
+    <!--ImageView Logo-->
+    <ImageView
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/xtremetec_logo" />
+
+    <!--EditText Correo electrónico-->
+    <EditText
+        android:id="@+id/et_usuario_login"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:background="@color/white"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+        />
+    <!--EditText contraseña-->
+    <EditText
+        android:id="@+id/et_password_login"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="Contraseña"
+        android:background="@color/white"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"/>
+    <!--Botón Iniciar sesión-->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="#ae0000"
+        android:text="Iniciar Sesión"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--TextView que pregunta si estas registrado-->
+        <!--Boton Registrate que te redirige al layout register-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:text="¿No tienes cuenta?"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_registrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Registrarse"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </LinearLayout>
+
+</LinearLayout>

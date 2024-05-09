@@ -16,15 +16,17 @@
         android:theme="@style/Theme.XTPCAPP"
         tools:targetApi="tiramisu">
         <activity
+            android:name=".activity_login"
+            android:exported="false" />
+        <activity
             android:name=".actividades.VistaProductoIndividual"
             android:exported="false" />
-
-        <activity android:name=".actividades.CarritoCompra"
-            android:exported="false"/>
-
-        <activity android:name=".actividades.Buscador1"
-            android:exported="false"/>
-
+        <activity
+            android:name=".actividades.CarritoCompra"
+            android:exported="false" />
+        <activity
+            android:name=".actividades.Buscador1"
+            android:exported="false" />
         <activity
             android:name=".Inicio"
             android:exported="true">
