@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -126,7 +127,19 @@ class CarritoCompra : AppCompatActivity() {
         //Este abre la pantalla de Gracias por su compra
         val btnPagar = findViewById<Button>(R.id.btnPagarCarrito)
         btnPagar.setOnClickListener {
-            // Implementar la lógica para realizar el pedido aquí
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Compra realizada")
+            builder.setMessage("Gracias por su compra")
+
+            builder.setPositiveButton("Aceptar") { dialog, _ ->
+                val intent = Intent(this, Inicio::class.java)
+                startActivity(intent)
+                dialog.dismiss()
+            }
+
+            val dialog = builder.create()
+            dialog.show()
+
         }
         // Obtener una referencia al BottomNavigationView del layout
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.navmenu)
