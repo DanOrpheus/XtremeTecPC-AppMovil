@@ -31,8 +31,10 @@ class Buscador1 : AppCompatActivity(), SearchView.OnQueryTextListener {
         listaProductos.layoutManager=LinearLayoutManager(this)
 
         listaArrayProducto = ArrayList()
-        //adapter = adaptadorProductoBusqueda(listaArrayProducto)
-        //listaProductos.adapter = adapter
+
+        // Inicializar el adaptador vacío
+        adapter = adaptadorProductoBusqueda(ArrayList())
+        listaProductos.adapter = adapter
 
         val productos = productoDAO.buscarProductos("") { productos ->
             adapter = adaptadorProductoBusqueda(productos)
@@ -47,7 +49,9 @@ class Buscador1 : AppCompatActivity(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextChange(newText: String?): Boolean {
-        adapter.filtrar(newText.orEmpty())
+        if (::adapter.isInitialized) {
+            adapter.filtrar(newText.orEmpty())
+        }
         return true
     }
     fun retroceder(view: View) {

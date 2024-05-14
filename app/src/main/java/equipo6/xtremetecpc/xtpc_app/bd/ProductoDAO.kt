@@ -13,7 +13,6 @@ class ProductoDAO {
 
         // Aplicar el filtro de consulta directamente en Firebase
         val consulta = referenciaBaseDatos.orderByChild("nombre").startAt(query).endAt(query + "\uf8ff")
-
         consulta.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val resultados = mutableListOf<Producto>()

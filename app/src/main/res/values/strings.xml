@@ -1,14 +1,5 @@
 <resources>
     <string name="app_name">XTPC-APP</string>
-    <string name="seleccionar_opcion">Seleccionar opción</string>
-    <string-array name="opciones">
-        <item>Seleccionar una opción</item>
-        <item>Recoger en sucursal --- $0.00</item>
-        <item>Envió A Domicilio (Solo Cd. Obregón) --- $49.00</item>
-        <item>Envío Estándar 3 a 6 Días --- $104.00</item>
-        <item>Envío Urgente 1 a 2 Días --- $499.00</item>
-    </string-array>
-
     <string name="hintSearchView">Buscar productos</string>
     <string name="title_activity_catalogo">Catalogo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
