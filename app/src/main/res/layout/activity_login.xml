@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/gris"
-    tools:context=".activity_login">
+    tools:context=".Login">
 
     <!--ImageView Logo-->
     <ImageView
@@ -19,10 +19,10 @@
 
     <!--EditText Correo electrónico-->
     <EditText
-        android:id="@+id/et_usuario_login"
+        android:id="@+id/et_email_login"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:hint="Usuario"
+        android:hint="Email"
         android:inputType="text"
         android:background="@color/white"
         android:textSize="15sp"
@@ -74,7 +74,7 @@
             android:textSize="15sp" />
 
         <Button
-            android:id="@+id/btn_registrate"
+            android:id="@+id/btn_registro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"

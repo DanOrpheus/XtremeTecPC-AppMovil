@@ -16,11 +16,16 @@
         android:theme="@style/Theme.XTPCAPP"
         tools:targetApi="tiramisu">
         <activity
-            android:name=".activity_registro"
+            android:name=".Registro"
             android:exported="false" />
         <activity
-            android:name=".activity_login"
-            android:exported="false" />
+            android:name=".Login"
+            android:exported="true" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         <activity
             android:name=".actividades.VistaProductoIndividual"
             android:exported="false" />
@@ -33,11 +38,6 @@
         <activity
             android:name=".Inicio"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
