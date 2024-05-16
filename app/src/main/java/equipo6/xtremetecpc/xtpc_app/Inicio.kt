@@ -25,6 +25,10 @@ class Inicio : AppCompatActivity() {
                     abrirActividad(Buscador1::class.java)
                     return@OnNavigationItemSelectedListener true
                 }
+                R.id.btm_nav_contacto ->{
+                    abrirActividad(CarritoCompra::class.java)
+                    return@OnNavigationItemSelectedListener true
+                }
                 R.id.btm_nav_carrito ->{
                     abrirActividad(CarritoCompra::class.java)
                     return@OnNavigationItemSelectedListener true

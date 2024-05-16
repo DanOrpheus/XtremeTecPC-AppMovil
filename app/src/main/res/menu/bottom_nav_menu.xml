@@ -10,7 +10,7 @@
         android:icon="@drawable/baseline_search_black_24dp"
         android:title="Buscador" />
     <item
-        android:id="@+id/btm_nav_perfil"
+        android:id="@+id/btm_nav_contacto"
         android:icon="@drawable/baseline_person_24"
         android:title="Perfil" />
     <item
