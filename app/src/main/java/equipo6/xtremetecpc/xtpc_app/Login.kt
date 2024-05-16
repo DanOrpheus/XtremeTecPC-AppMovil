@@ -60,7 +60,7 @@ class Login : AppCompatActivity() {
             }else{
                 Toast.makeText(this, "Ingresar datos", Toast.LENGTH_SHORT).show()
             }
-            
+
         }
 
     }
