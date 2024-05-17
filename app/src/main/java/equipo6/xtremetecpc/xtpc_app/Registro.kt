@@ -37,6 +37,7 @@ class Registro : AppCompatActivity() {
         et_password1 = findViewById(R.id.et_password1)
         et_password2 = findViewById(R.id.et_password2)
         btn_crearCuenta = findViewById(R.id.btn_crearCuenta)
+        btn_iniciarSesion = findViewById(R.id.btn_iniciarSesión)
 
         auth = Firebase.auth
 

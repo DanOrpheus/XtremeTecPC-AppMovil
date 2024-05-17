@@ -9,7 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class Login : AppCompatActivity() {
 
@@ -29,6 +31,8 @@ class Login : AppCompatActivity() {
         et_email_login = findViewById(R.id.et_email_login)
         et_password_login = findViewById(R.id.et_password_login)
 
+        auth = Firebase.auth
+
         btn_registo.setOnClickListener{
             var intent = Intent(this, Registro::class.java)
             startActivity(intent)
@@ -41,7 +45,7 @@ class Login : AppCompatActivity() {
 
             if(!email.isNullOrEmpty() && !password.isNullOrEmpty()){
 
-                auth.createUserWithEmailAndPassword(email, password)
+                auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             val user = auth.currentUser
